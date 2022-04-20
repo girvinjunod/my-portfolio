@@ -1,65 +1,56 @@
 <script lang="ts">
-  import logo from "./assets/svelte.png";
+  import picture from "./assets/girvin.png";
+  import { slide } from "svelte/transition";
+  import { quartInOut } from "svelte/easing";
   import Counter from "./lib/Counter.svelte";
+  const roles = ["Student", "Software Engineer", "Fullstack Developer"];
+  let i = 0;
+  let activeIndex = 0;
+  setInterval(() => {
+    i = (i + 1) % roles.length;
+    activeIndex = i;
+  }, 2500);
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
+<main class="bg-[#00134A] flex">
+  <div class="flex mx-auto my-auto justify-center items-center">
+    <img
+      src={picture}
+      alt="Girvin Junod"
+      class="object-cover rounded-full h-52 w-52 m-8"
+    />
+    <div class="w-max text-left">
+      <h2 class="text-4xl mb-4">Hello, I'm Girvin Junod</h2>
+      {#each roles as role, idx}
+        {#if activeIndex == idx}
+          <p
+            transition:slide|local={{
+              duration: 200,
+              easing: quartInOut,
+            }}
+            class="role"
+          >
+            {role}
+          </p>
+        {/if}
+      {/each}
+    </div>
+  </div>
 
-  <Counter />
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p class="">
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
+  <!-- <Counter /> -->
 </main>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  p,
+  h2 {
+    @apply font-sans text-white;
+  }
+
+  .role {
+    @apply text-3xl font-bold font-mono;
   }
 
   main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
+    @apply text-center mx-0 my-auto p-4 h-screen w-screen;
   }
 </style>
