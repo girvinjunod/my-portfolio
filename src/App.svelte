@@ -1,56 +1,25 @@
 <script lang="ts">
-  import picture from "./assets/girvin.png";
-  import { slide } from "svelte/transition";
-  import { quartInOut } from "svelte/easing";
-  import Counter from "./lib/Counter.svelte";
-  const roles = ["Student", "Software Engineer", "Fullstack Developer"];
-  let i = 0;
-  let activeIndex = 0;
-  setInterval(() => {
-    i = (i + 1) % roles.length;
-    activeIndex = i;
-  }, 2500);
+  import "@fortawesome/fontawesome-free/js/all.min";
+  import Router from "svelte-spa-router";
+  import { Home } from "./Views/routes";
+  import Footer from "./lib/Footer.svelte";
+  import Navbar from "./lib/Navbar.svelte";
+
+  const routes = {
+    "/": Home,
+  };
 </script>
 
-<main class="bg-[#00134A] flex">
-  <div class="flex mx-auto my-auto justify-center items-center">
-    <img
-      src={picture}
-      alt="Girvin Junod"
-      class="object-cover rounded-full h-52 w-52 m-8"
-    />
-    <div class="w-max text-left">
-      <h2 class="text-4xl mb-4">Hello, I'm Girvin Junod</h2>
-      {#each roles as role, idx}
-        {#if activeIndex == idx}
-          <p
-            transition:slide|local={{
-              duration: 200,
-              easing: quartInOut,
-            }}
-            class="role"
-          >
-            {role}
-          </p>
-        {/if}
-      {/each}
-    </div>
+<main class="flex">
+  <Navbar />
+  <div class="bg-[#00134A] flex text-center mx-0 my-auto p-4 h-full w-full">
+    <Router {routes} restoreScrollState={true} />
+    <Footer />
   </div>
-
-  <!-- <Counter /> -->
 </main>
 
 <style>
-  p,
-  h2 {
-    @apply font-sans text-white;
-  }
-
-  .role {
-    @apply text-3xl font-bold font-mono;
-  }
-
   main {
-    @apply text-center mx-0 my-auto p-4 h-screen w-screen;
+    @apply h-screen w-screen;
   }
 </style>
