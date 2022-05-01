@@ -2,10 +2,10 @@
   import View from "../lib/View.svelte";
 </script>
 
-<View nextViewPath="/projects" prevViewPath="/">
+<View nextViewPath="/" prevViewPath="/">
   <div class="flex flex-col justify-center items-center z-30">
     <div>
-      <h2>About Me</h2>
+      <h2 class="text-4xl mb-4">Page Not Found :(</h2>
     </div>
   </div>
 </View>

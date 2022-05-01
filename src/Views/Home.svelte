@@ -30,7 +30,7 @@
 </script>
 
 <View nextViewPath="/about" prevViewPath="/">
-  <div class="flex flex-col justify-center items-center z-30">
+  <div class="flex flex-col justify-center items-center z-30 mx-auto my-auto">
     <div class="flex justify-center items-center w-[650px]">
       <img
         src={picture}

@@ -6,7 +6,10 @@
   export let nextViewPath: string | undefined = undefined;
   export let prevViewPath: string | undefined = undefined;
   let touchStartY: number, touchEndY: number;
+  console.log(nextViewPath);
+  console.log(prevViewPath);
   const changePage = (e: WheelEvent | TouchEvent) => {
+    console.log("Change");
     if (window.TouchEvent && e instanceof TouchEvent) {
       const touch = e.touches[0] || e.changedTouches[0] || e.targetTouches[0];
       switch (e.type) {
@@ -26,7 +29,9 @@
       else if (prevViewPath && e.deltaY < 0) push(prevViewPath);
     }
   };
-  const doNothing = () => {};
+  const doNothing = () => {
+    console.log("nothing");
+  };
 </script>
 
 <div
@@ -34,7 +39,7 @@
   on:wheel={nextViewPath || prevViewPath ? changePage : doNothing}
   on:touchstart={nextViewPath || prevViewPath ? changePage : doNothing}
   on:touchmove={nextViewPath || prevViewPath ? changePage : doNothing}
-  class="mx-auto my-auto p-4"
+  class="h-full w-full relative justify-center items-center flex"
 >
   <slot />
 </div>
