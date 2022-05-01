@@ -23,13 +23,7 @@ type NavItem = {
       text: 'Projects',
       link: '/projects',
       icon: 'terminal',
-    },
-    {
-        name: 'contacts',
-        text: 'Contact',
-        link: '/contact',
-        icon: 'envelope',
-      }
+    }
   ];
   
   export default NavItem;
