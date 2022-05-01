@@ -1,6 +1,8 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import { push } from "svelte-spa-router";
+  import { slide } from "svelte/transition";
+  import { quartInOut } from "svelte/easing";
   export let nextViewPath: string | undefined = undefined;
   export let prevViewPath: string | undefined = undefined;
   let touchStartY: number, touchEndY: number;

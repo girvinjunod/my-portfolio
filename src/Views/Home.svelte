@@ -2,7 +2,7 @@
   import picture from "../assets/girvin.png";
   import { slide } from "svelte/transition";
   import { quartInOut } from "svelte/easing";
-  import View from "../lib//View.svelte";
+  import View from "../lib/View.svelte";
   import SocialMedia from "../data/SocialMedia";
 
   // import { onMount } from "svelte";
@@ -29,7 +29,7 @@
   // });
 </script>
 
-<View nextViewPath="/" prevViewPath="/">
+<View nextViewPath="/about" prevViewPath="/">
   <div class="flex flex-col justify-center items-center z-30">
     <div class="flex justify-center items-center w-[650px]">
       <img

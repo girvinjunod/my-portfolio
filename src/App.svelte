@@ -1,12 +1,13 @@
 <script lang="ts">
   import "@fortawesome/fontawesome-free/js/all.min";
   import Router from "svelte-spa-router";
-  import { Home } from "./Views/routes";
+  import { Home, About } from "./Views/routes";
   import Footer from "./lib/Footer.svelte";
   import Navbar from "./lib/Navbar.svelte";
 
   const routes = {
     "/": Home,
+    "/about": About,
   };
 </script>
 
