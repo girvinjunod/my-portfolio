@@ -12,7 +12,7 @@
 
 <main class="flex">
   <Navbar />
-  <div class="bg-[#00134A] flex text-center mx-0 my-auto p-4 h-full w-full">
+  <div class="bg-[#00134A] z-0 flex text-center mx-0 my-auto h-full w-full">
     <Router {routes} restoreScrollState={true} />
     <Footer />
   </div>

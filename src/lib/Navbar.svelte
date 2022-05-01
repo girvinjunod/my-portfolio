@@ -5,7 +5,7 @@
 </script>
 
 <nav
-  class="fixed bg-blue-900 h-screen m-0 w-20 duration-300 hover:w-52 text-white"
+  class="fixed bg-blue-900 h-screen m-0 w-20 duration-300 hover:w-52 text-white z-30"
 >
   <ul class="flex items-start flex-col h-full w-full list-none m-0 p-0">
     {#each NavItems as { text, link, icon }}
