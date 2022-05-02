@@ -1,15 +1,13 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import { push } from "svelte-spa-router";
-  import { slide } from "svelte/transition";
-  import { quartInOut } from "svelte/easing";
   export let nextViewPath: string | undefined = undefined;
   export let prevViewPath: string | undefined = undefined;
   let touchStartY: number, touchEndY: number;
-  console.log(nextViewPath);
-  console.log(prevViewPath);
+  // console.log(nextViewPath);
+  // console.log(prevViewPath);
   const changePage = (e: WheelEvent | TouchEvent) => {
-    console.log("Change");
+    // console.log("Change");
     if (window.TouchEvent && e instanceof TouchEvent) {
       const touch = e.touches[0] || e.changedTouches[0] || e.targetTouches[0];
       switch (e.type) {
@@ -30,7 +28,7 @@
     }
   };
   const doNothing = () => {
-    console.log("nothing");
+    // console.log("nothing");
   };
 </script>
 
@@ -39,7 +37,7 @@
   on:wheel={nextViewPath || prevViewPath ? changePage : doNothing}
   on:touchstart={nextViewPath || prevViewPath ? changePage : doNothing}
   on:touchmove={nextViewPath || prevViewPath ? changePage : doNothing}
-  class="h-full w-full relative justify-center items-center flex"
+  class="h-full w-full relative justify-center items-center flex "
 >
   <slot />
 </div>

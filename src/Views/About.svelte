@@ -1,16 +1,27 @@
 <script lang="ts">
   import View from "../lib/View.svelte";
   import cv from "../assets/CV_Girvin_Junod.pdf";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+
+  let showLang = false;
+  let hideLang = false;
+  let toggleLanguage = () => {
+    console.log("Click");
+    showLang = !showLang;
+    hideLang = !hideLang;
+  };
 </script>
 
 <View nextViewPath="/projects" prevViewPath="/">
   <div class="flex flex-col items-center h-full w-full ml-12 text-lg">
-    <div class="flex items-center mt-20">
+    <!-- Description -->
+    <div class="flex mt-10">
       <div class="w-40">
-        <h2 class="text-2xl text-right">About Me</h2>
+        <h2 class="text-xl text-right">About Me</h2>
       </div>
       <div class="ml-20 w-[800px] ">
-        <p class="text-white text-left">
+        <p class="text-white text-left text-base">
           Hello there, my name is Girvin Junod. I'm currently an undergraduate
           student in Institut Teknologi Bandung (ITB) majoring in Computer
           Science. I love exploring new stuff and learning more about computer
@@ -19,11 +30,45 @@
       </div>
     </div>
 
-    <div class="flex items-center mt-10">
-      <div class="w-40">
-        <h2 class="text-2xl text-right">Experiences</h2>
+    <!-- Skills -->
+    <div class="flex mt-10">
+      <div class="w-40 flex justify-end">
+        <h2 class="text-xl text-right">Skills</h2>
       </div>
-      <div class="ml-20 w-[800px] text-white">
+      <div class="ml-20 w-[800px] text-white text-left text-base">
+        <button class="font-bold flex items-center" on:click={toggleLanguage}>
+          <span class:hidden={hideLang} class=" w-1">
+            <i class="fa-solid fa-chevron-right" />
+          </span>
+          <span class:hidden={!hideLang} class=" w-1">
+            <i class="fa-solid fa-chevron-down " />
+          </span>
+          <p class="ml-4">Programming Languages</p></button
+        >
+        {#if showLang}
+          <div
+            transition:slide|local={{ easing: quintOut }}
+            class="bg-blue-400 rounded ml-5 p-1"
+          >
+            <ul class="flex">
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        {/if}
+        <!-- <details>
+          <summary>Technologies</summary>
+          <p>Hi</p>
+        </details> -->
+      </div>
+    </div>
+
+    <!-- Experiences -->
+    <div class="flex mt-10">
+      <div class="w-40">
+        <h2 class="text-xl text-right">Experiences</h2>
+      </div>
+      <div class="ml-20 w-[800px] text-white text-base">
         <div class="flex">
           <div class="line">
             <div class="dot" />
@@ -57,17 +102,17 @@
       </div>
     </div>
 
-    <div class="flex items-center mt-10">
+    <!-- CV -->
+    <div class="flex mt-10">
       <div class="w-40">
-        <h2 class="text-2xl text-right">CV</h2>
+        <h2 class="text-xl text-right">CV</h2>
       </div>
       <div class="ml-20 w-[800px] ">
-        <p class="text-white text-left">
-          You can preview my CV<a
+        <p class="text-white text-left text-base">
+          You can preview my CV <a
             href={cv}
             download="CV_Girvin_Junod"
-            class="bg-amber-500 hover:bg-blue-500 duration-300 px-4 mx-2 rounded border-none py-1"
-            >here</a
+            class="text-yellow-300 hover:text-blue-300 duration-300">here</a
           >
         </p>
       </div>
