@@ -65,7 +65,7 @@
         <p class="text-white text-left">
           You can preview my CV<a
             href={cv}
-            download
+            download="CV_Girvin_Junod"
             class="bg-amber-500 hover:bg-blue-500 duration-300 px-4 mx-2 rounded border-none py-1"
             >here</a
           >

@@ -15,7 +15,7 @@
   setInterval(() => {
     i = (i + 1) % roles.length;
     activeIndex = i;
-  }, 2500);
+  }, 2000);
   // onMount(() => {
   //   anime({
   //     targets: ".canim .circle",
@@ -37,9 +37,9 @@
         alt="Girvin Junod"
         class="object-cover rounded-full h-52 w-52 m-8"
       />
-      <div class="w-max text-left h-auto">
+      <div class="w-max text-left h-36 flex flex-col justify-centers">
         <h2 class="text-4xl mb-4">Hello, I'm Girvin Junod</h2>
-        <div class="mb-4">
+        <div class="">
           {#each roles as role, idx}
             {#if activeIndex == idx}
               <p
