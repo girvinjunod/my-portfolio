@@ -1,5 +1,4 @@
 <script lang="ts">
-  import picture from "../assets/girvin.png";
   import { slide } from "svelte/transition";
   import { quartInOut } from "svelte/easing";
   import View from "../lib/View.svelte";
@@ -33,7 +32,7 @@
   <div class="flex flex-col justify-center items-center z-30 mx-auto my-auto">
     <div class="flex justify-center items-center w-[650px]">
       <img
-        src={picture}
+        src="girvin.png"
         alt="Girvin Junod"
         class="object-cover rounded-full h-52 w-52 m-8"
       />
