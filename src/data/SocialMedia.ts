@@ -32,7 +32,7 @@ type SocialMedia = {
       name: 'instagram', // default item
       text: '@girvinjunod_',
       link: 'https://www.instagram.com/girvinjunod_',
-      icon: 'instagram',
+      icon: 'instagram-square',
       isBrand: true,
     },
   ];

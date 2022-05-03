@@ -56,7 +56,11 @@
         </div>
         <div class="mt-auto">
           {#each SocialMedia as { link, icon, isBrand }}
-            <a href={link} target="_blank" class="text-white">
+            <a
+              href={link}
+              target="_blank"
+              class="text-white hover:text-blue-600 duration-300"
+            >
               <i class="{isBrand ? 'fab' : 'fas'} fa-{icon} fa-2x icon mr-2 " />
             </a>
           {/each}

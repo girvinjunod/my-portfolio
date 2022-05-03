@@ -1,5 +1,15 @@
+<script lang="ts">
+  import cv from "../assets/CV_Girvin_Junod.pdf";
+</script>
+
 <footer>
-  <p class="text-center">2022 - Girvin Junod</p>
+  <p class="text-center">
+    2022 - Preview my CV <a
+      href={cv}
+      download="CV_Girvin_Junod"
+      class="text-yellow-300 hover:text-blue-300 duration-300">here</a
+    >
+  </p>
 </footer>
 
 <style>
