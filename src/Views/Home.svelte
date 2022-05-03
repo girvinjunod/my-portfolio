@@ -32,7 +32,7 @@
   <div class="flex flex-col justify-center items-center z-30 mx-auto my-auto">
     <div class="flex justify-center items-center w-[650px]">
       <img
-        src="girvin.png"
+        src="assets/girvin.png"
         alt="Girvin Junod"
         class="object-cover rounded-full h-52 w-52 m-8"
       />

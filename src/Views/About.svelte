@@ -70,7 +70,7 @@
                     <div class="w-6 h-4">
                       <img
                         class="object-contain w-6 h-4"
-                        src={"/logo/lang/" + lang.path}
+                        src={"/assets/logo/lang/" + lang.path}
                         alt={lang.name + " logo"}
                       />
                     </div>
@@ -107,7 +107,7 @@
                     <div class="w-6 h-4">
                       <img
                         class="object-contain w-6 h-4"
-                        src={"/logo/tech/" + tech.path}
+                        src={"/assets/logo/tech/" + tech.path}
                         alt={tech.name + " logo"}
                       />
                     </div>
