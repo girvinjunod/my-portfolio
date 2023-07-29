@@ -7,7 +7,12 @@
   // import { onMount } from "svelte";
   // import anime from "animejs";
 
-  const roles = ["Student", "Software Engineer", "Fullstack Developer"];
+  const roles = [
+    "Student",
+    "Software Engineer",
+    "Programmer",
+    "Animal Enthusiast",
+  ];
   let i = 0;
   let activeIndex = 0;
 
@@ -60,7 +65,7 @@
               target="_blank"
               class="text-white hover:text-blue-600 duration-300"
             >
-              <i class="{isBrand ? 'fab' : 'fas'} fa-{icon} fa-2x icon mr-2 " />
+              <i class="{isBrand ? 'fab' : 'fas'} fa-{icon} fa-2x icon mr-2" />
             </a>
           {/each}
         </div>

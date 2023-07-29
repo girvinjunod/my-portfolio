@@ -9,16 +9,12 @@ type tech = {
         path: "nodejs.svg",
     },
     {
-        name: "Express.js",
-        path: "express.svg",
+        name: "PostgreSQL",
+        path: "psql.svg",
     },
     {
         name: "MySQL",
         path: "mysql.svg",
-    },
-    {
-        name: "PostgreSQL",
-        path: "psql.svg",
     },
     {
         name: "Redis",
@@ -33,14 +29,6 @@ type tech = {
         path: "react.svg",
     },
     {
-        name: "Vue.js",
-        path: "vue.svg",
-    },
-    {
-        name: "Svelte",
-        path: "svelte.svg",
-    },
-    {
         name: "Next.js",
         path: "next.svg",
     },
@@ -51,6 +39,18 @@ type tech = {
     {
         name: "Docker",
         path: "docker.svg",
+    },
+    {
+        name: "Vue.js",
+        path: "vue.svg",
+    },
+    {
+        name: "Svelte",
+        path: "svelte.svg",
+    },
+    {
+        name: "Express.js",
+        path: "express.svg",
     },
     {
         name: "Flask",

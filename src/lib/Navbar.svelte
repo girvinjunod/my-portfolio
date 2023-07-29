@@ -11,7 +11,7 @@
     {#each NavItems as { text, link, icon }}
       <li class="w-full">
         <a
-          class="flex items-center justify-start h-16 outline-none no-underline duration-300 
+          class="flex items-center justify-start h-16 outline-none no-underline duration-300
             hover:text-blue-300"
           href={link}
           use:routerLink

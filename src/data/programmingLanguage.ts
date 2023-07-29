@@ -1,36 +1,44 @@
 type language = {
     name: string;
     path: string;
+    bg?: string;
+    bg_hover?: string;
+    text?: string;
+    text_hover?: string;
   };
   
   const listLang: language[] = [
     {
-      name: "JavaScript",
-      path: "js.svg",
-    },
-    {
       name: "Go",
       path: "go.svg",
-    },
-    {
-      name: "Python",
-      path: "python.svg",
+      bg: "bg-sky-800",
+      bg_hover: "bg-blue-300",
+      text: "text-white",
+      text_hover: "text-black"
     },
     {
       name: "TypeScript",
       path: "ts.svg",
     },
     {
+      name: "Python",
+      path: "python.svg",
+    },
+    {
+      name: "JavaScript",
+      path: "js.svg",
+    },
+    {
       name: "PHP",
       path: "php.svg",
     },
     {
-      name: "Java",
-      path: "java.svg",
-    },
-    {
       name: "Kotlin",
       path: "kotlin.svg",
+    },
+    {
+      name: "Java",
+      path: "java.svg",
     },
     {
       name: "Dart",

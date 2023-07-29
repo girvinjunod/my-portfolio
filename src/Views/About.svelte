@@ -30,12 +30,12 @@
       <div class="w-40">
         <h2 class="text-xl text-right">About Me</h2>
       </div>
-      <div class="ml-20 w-[800px] ">
+      <div class="ml-20 w-[800px]">
         <p class="text-white text-left text-base">
-          Hello there, my name is Girvin Junod. I'm currently an undergraduate
-          student in Institut Teknologi Bandung (ITB) majoring in Computer
-          Science. I love exploring new stuff and learning more about computer
-          science in general.
+          Hello there, my name is Girvin Junod. I'm a fresh graduate from
+          Institut Teknologi Bandung (ITB) majoring in Computer Science. I love
+          exploring new stuff and learning more about computer science in
+          general.
         </p>
       </div>
     </div>
@@ -51,7 +51,7 @@
             <i class="fa-solid fa-chevron-right" />
           </span>
           <span class:hidden={!hideLang} class=" w-1">
-            <i class="fa-solid fa-chevron-down " />
+            <i class="fa-solid fa-chevron-down" />
           </span>
           <p class="ml-4">Programming Languages</p></button
         >
@@ -64,12 +64,19 @@
               {#each listLang as lang}
                 <li>
                   <div
-                    class="flex justify-center items-center bg-sky-800 text-white mr-2 rounded p-1 px-2 my-1 
-                    hover:bg-blue-300 hover:text-black duration-200 overflow-clip"
+                    class={"flex justify-center items-center mr-2 rounded p-1 px-2 my-1 duration-200 overflow-clip" +
+                      " " +
+                      `${lang.bg ? lang.bg : "bg-sky-800"}  ${
+                        lang.text ? lang.text : "text-white"
+                      } hover:${
+                        lang.bg_hover ? lang.bg_hover : "bg-blue-300"
+                      } hover:${
+                        lang.text_hover ? lang.text_hover : "text-black"
+                      }`}
                   >
-                    <div class="w-6 h-4">
+                    <div class={"w-6 h-4"}>
                       <img
-                        class="object-contain w-6 h-4"
+                        class={"object-contain w-6 h-4"}
                         src={"/assets/logo/lang/" + lang.path}
                         alt={lang.name + " logo"}
                       />
@@ -88,7 +95,7 @@
             <i class="fa-solid fa-chevron-right" />
           </span>
           <span class:hidden={!hideTech} class=" w-1">
-            <i class="fa-solid fa-chevron-down " />
+            <i class="fa-solid fa-chevron-down" />
           </span>
           <p class="ml-4">Technologies</p></button
         >
@@ -101,7 +108,7 @@
               {#each listTech as tech}
                 <li>
                   <div
-                    class="flex justify-center items-center bg-sky-800 text-white mr-2 rounded p-1 px-2 my-1 
+                    class="flex justify-center items-center bg-sky-800 text-white mr-2 rounded p-1 px-2 my-1
                     hover:bg-blue-300 hover:text-black duration-200 overflow-clip"
                   >
                     <div class="w-6 h-4">
@@ -128,7 +135,27 @@
       <div class="w-40">
         <h2 class="text-xl text-right">Experiences</h2>
       </div>
-      <div class="ml-20 w-[800px] text-white text-base">
+      <div class="ml-20 w-[800px] text-white text-base h-40">
+        <div class="flex">
+          <div class="line">
+            <div class="dot" />
+          </div>
+          <div class="text-left mb-6">
+            <h3 class="font-bold">Software Engineer (Internship)</h3>
+            <h4>Bank OCBC NISP</h4>
+            <h5>May 2023 - August 2023</h5>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="line">
+            <div class="dot" />
+          </div>
+          <div class="text-left mb-6">
+            <h3 class="font-bold">Software Developer (Internship)</h3>
+            <h4>PT. Dans Multi Pro</h4>
+            <h5>June 2022 - September 2022</h5>
+          </div>
+        </div>
         <div class="flex">
           <div class="line">
             <div class="dot" />
@@ -136,7 +163,7 @@
           <div class="text-left mb-6">
             <h3 class="font-bold">Backend Engineer (Part-Time)</h3>
             <h4>Kenangan.com</h4>
-            <h5>December 2021 - Present</h5>
+            <h5>December 2021 - July 2022</h5>
           </div>
         </div>
         <div class="flex">
@@ -148,19 +175,7 @@
               Computational Science and Engineering Laboratory Assistant
             </h3>
             <h4>Institut Teknologi Bandung</h4>
-            <h5>August 2021 - Present</h5>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="line">
-            <div class="dot" />
-          </div>
-          <div class="text-left mb-4">
-            <h3 class="font-bold">
-              Lab Assistant of Introduction to Computation Course
-            </h3>
-            <h4>Institut Teknologi Bandung</h4>
-            <h5>August 2020 - December 2020</h5>
+            <h5>August 2021 - July 2023</h5>
           </div>
         </div>
       </div>

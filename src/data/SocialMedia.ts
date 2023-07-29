@@ -24,7 +24,7 @@ type SocialMedia = {
     {
       name: 'email',
       text: 'Email',
-      link: 'mailto:13519096@std.stei.itb.ac.id',
+      link: 'mailto:girvinjunod@gmail.com',
       icon: 'envelope-square',
       isBrand: false,
     },
@@ -34,6 +34,7 @@ type SocialMedia = {
       link: 'https://www.instagram.com/girvinjunod_',
       icon: 'instagram-square',
       isBrand: true,
+      
     },
   ];
   
